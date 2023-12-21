@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-gwlr
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/nbe-e2e-lfxp-tenant/integ-app-uzvk/hacbs-test-project-gwlr@sha256:9f8ace43bd8753c0e8e7b88d131b889508dcc400708adb9a9fc795219c59c91e
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
